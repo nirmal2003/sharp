@@ -1,0 +1,5 @@
+backend/target
+backend/docs
+frontend/node_modules
+design
+.idea
