@@ -1,0 +1,9 @@
+.employee_user_list {
+    @media screen and (max-width: 645px) {
+        justify-content: center;
+
+        .employee_user_list_item {
+            width: 100%;
+        }
+    }
+}

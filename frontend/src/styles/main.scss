@@ -1,0 +1,79 @@
+@import "pages/tables";
+@import "pages/popup";
+@import "acstract/classes";
+@import "acstract/variables";
+@import "pages/home";
+@import "pages/employee";
+
+body {
+    @extend .scrollbar_hide;
+}
+
+.border-bottom-not-first-child:not(:last-child) {
+    border-bottom: 1px solid #464646;
+}
+
+.task-calender {
+    background-color: #222222 !important;
+    color: #c2c2c2;
+    border: 1px solid rgba(255,255,225,0.1);
+    padding: 0 !important;
+    width: 300px !important;
+
+    .Calendar__monthYear {
+        button {
+            color: #ffffff;
+            font-size: 0.9rem;
+
+            &:hover {
+                background: transparent;
+            }
+        }
+    }
+
+    .Calendar__day {
+        color: rgba(255,255,255,0.7) !important;
+        font-size: 0.8rem !important;
+
+        &:hover {
+            color: rgba(0,0,0,0.7) !important;
+        }
+    }
+
+    .-today {
+        background-color: rgba(255,255,255,0.1);
+    }
+
+    .-selected {
+        background-color: rgba(71, 3, 183, 0.53) !important;
+    }
+
+    .-selectedBetween {
+        background: rgba(255,255,255,0.1) !important;
+    }
+
+    .-selectedEnd {
+        background-color: rgba(255,255,255, 0.8) !important;
+        color: rgba(0,0,0,0.8) !important;
+    }
+
+    .-selectedStart {
+        background-color: rgba(255,255,255, 0.8) !important;
+        color: rgba(0,0,0,0.8) !important;
+    }
+}
+
+input {
+    background: transparent;
+    outline: none;
+}
+
+
+text {
+    fill: #ffffff !important;
+    font-size: 0.85rem !important;
+}
+
+.text-very-sm {
+    font-size: 0.75rem;
+}
