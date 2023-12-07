@@ -6,6 +6,8 @@ import taskOptionsReducer from "./reducers/project/task/options";
 import colorsReducer from "./reducers/colors";
 import employeesRoleReducer from "./reducers/employees/roles";
 import employeeInvitesReducer from "./reducers/employees/user_invites";
+import employeeUsersReducer from "./reducers/employees/users";
+import taskDetailsReducer from "./reducers/project/task/details";
 
 const store = configureStore({
     reducer: {
@@ -15,7 +17,9 @@ const store = configureStore({
         taskOptions: taskOptionsReducer,
         colors: colorsReducer,
         employees_roles: employeesRoleReducer,
-        employee_invites: employeeInvitesReducer
+        employee_invites: employeeInvitesReducer,
+        employee_users: employeeUsersReducer,
+        task_details: taskDetailsReducer
     }
 });
 

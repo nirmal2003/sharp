@@ -7,9 +7,9 @@ import ProjectWrapper from "../../../../components/wrappers/project_wrapper";
 const ProjectMembersPage = () => {
     return (
         <DashboardWrapper>
-            <ProjectNavbar />
+            <ProjectNavbar/>
             <ProjectWrapper>
-                <ProjectMembers />
+                <ProjectMembers/>
             </ProjectWrapper>
         </DashboardWrapper>
     )

@@ -15,19 +15,32 @@ const DashboardWrapper = ({ children }) => {
 
     const user = useSelector(state => state.user);
 
+    const projects = useSelector(state => state.projects);
+
     const get_projects = async () => {
         try {
-            const response = await axios_config.get("/project");
+            const response = await axios_config.get("/projects");
             dispatch(setProjects(response.data));
         } catch (error) {
             console.log(error);
         }
     }
 
+
+    const get_projects_participated_in = async () => {
+        // try {
+        //     const response = await axios_config.get("/projects/participating");
+        //     dispatch(setProjects([...projects, ...response.data]));
+        // } catch (error) {
+        //     console.log(error);
+        // }
+    }
+
     const get_user = async () => {
         try {
             const response = await axios_config.get('/user');
             get_projects();
+            get_projects_participated_in();
             dispatch(setUser(response.data));
         } catch (error) {
             navigate('/signin');

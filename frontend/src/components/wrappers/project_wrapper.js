@@ -15,7 +15,7 @@ const ProjectWrapper = ({ children }) => {
 
     const get_project =  async () => {
         try {
-            const response = await axios_config.get(`/project/${id}`);
+            const response = await axios_config.get(`/projects/${id}`);
             dispatch(setProject(response.data));
             setProject2(true);
         } catch (error) {

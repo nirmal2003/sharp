@@ -5,11 +5,15 @@ import DateColumn from "./date_column";
 import Options from "./options";
 import axios_config from "../../../../../utils/axios_config";
 import PriorityOptions from "./options/Priority";
+import {useDispatch} from "react-redux";
+import {setTaskId} from "../../../../../store/reducers/project/task/details";
 
 const Task = ({ myTasks, task, values }) => {
 
     const [taskName, setTaskName] = useState(task.name);
     const [isCompleted, setIsCompleted] = useState(task.isCompleted);
+
+    const dispatch = useDispatch();
 
     const update_task_name = async () => {
         try {
@@ -28,13 +32,15 @@ const Task = ({ myTasks, task, values }) => {
         }
     }
 
-    useEffect(() => {
-        console.log({task})
-    }, [task])
+    const handle_set_task_id = () => {
+        dispatch(setTaskId(task));
+    }
+
+
 
     return (
         <tr className="border-b border-b-border-color hover:bg-light-hover-transparent" style={{ borderLeft: isCompleted ? '2px solid rgba(0, 255, 8, 1)' : '2px solid transparent' }}>
-            <td className="h-11">
+            <td className="h-11" onClick={handle_set_task_id}>
                 <TextColumn value={taskName} onChange={(event) => setTaskName(event.target.value)} onBlur={update_task_name} complete_task={complete_task} />
             </td>
             <td className="h-11">

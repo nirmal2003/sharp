@@ -11,6 +11,9 @@ const SelectPerson = ({ selectAssignee }) => {
 
     const project = useSelector(state => state.project);
 
+    const employees = useSelector(state => state.employee_users);
+
+
     const get_members = async () => {
         setIsLoading(true);
         try {
@@ -26,6 +29,7 @@ const SelectPerson = ({ selectAssignee }) => {
         get_members();
     }, []);
 
+    
     return (
         <div className="w-80 p-1 h-fit absolute bg-black border border-border-color rounded top-14 z-30">
             {isLoading ? (

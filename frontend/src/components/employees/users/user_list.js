@@ -1,11 +1,15 @@
 import React from "react";
 import EmployeesUserListItem from "./user_list_item";
+import {useSelector} from "react-redux";
 
 const EmployeesUserList = () => {
+
+    const employees = useSelector(state => state.employee_users);
+
     return (
         <div className="employee_user_list flex flex-wrap">
-            {[1,2,3,4,5,6,7,8,9,10].map((_, index) => (
-                <EmployeesUserListItem key={index} />
+            {employees.map((item, index) => (
+                <EmployeesUserListItem data={item} key={index} />
             ))}
         </div>
     )

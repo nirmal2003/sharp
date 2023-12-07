@@ -3,6 +3,7 @@ import ActionBar from "../navbar/action_bar";
 import TaskLists from "./task_lists";
 import {useSelector} from "react-redux";
 import axios_config from "../../../../utils/axios_config";
+import TaskDetails from "./task_details";
 
 const Tasks = () => {
 
@@ -42,6 +43,7 @@ const Tasks = () => {
     return (
         <>
             <ActionBar newItem={true} onClick={create_task_list} />
+            <TaskDetails />
             <TaskLists myTasks={false} taskLists={taskLists} />
         </>
     )

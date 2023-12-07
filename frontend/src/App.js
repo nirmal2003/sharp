@@ -15,6 +15,7 @@ import HomePage from "./pages/home";
 import EmployeesPage from "./pages/employees";
 import EmployeesUsersPage from "./pages/employees/users";
 import EmployeesRolesPage from "./pages/employees/roles";
+import JoinDashboard from "./pages/invite/[id]";
 
 
 const App = () => {
@@ -41,6 +42,7 @@ const App = () => {
                     <Route element={<EmployeesPage />} path="/employees" />
                     <Route element={<EmployeesUsersPage />} path="/employees/users" />
                     <Route element={<EmployeesRolesPage />} path="/employees/roles" />
+                    <Route element={<JoinDashboard />} path="/invite/:id" />
                 </Routes>
             </BrowserRouter>
         </div>

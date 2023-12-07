@@ -19,6 +19,7 @@ const TextColumn = ({value, onChange, onBlur, complete_task}) => {
         if (val) setNameInputLength(val?.length * 8);
     }, [val]);
 
+
     return (
         <div className="value name">
             <img src="/images/icons/my_tasks.svg" alt="task" onClick={complete_task} />
@@ -28,7 +29,7 @@ const TextColumn = ({value, onChange, onBlur, complete_task}) => {
                 placeholder="task 01"
                 defaultValue={val}
                 onBlur={onBlur}
-                className="w-fit bg-transparent ml-2 text-gray text-sm outline-0 border rounded border-transparent focus:border-gray p-1"
+                className="w-fit bg-transparent ml-2 text-gray text-xs outline-0 border rounded border-transparent focus:border-gray p-1"
             />
         </div>
     )
